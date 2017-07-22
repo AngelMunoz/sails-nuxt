@@ -9,6 +9,7 @@
  * https://sailsjs.com/config/http
  */
 
+const { nuxt } = require('./nuxt');
 module.exports.http = {
 
   /****************************************************************************
@@ -28,19 +29,9 @@ module.exports.http = {
     * (This Sails app's routes are handled by the "router" middleware below.)  *
     *                                                                          *
     ***************************************************************************/
-    nuxt: function (req, res, next) {
-      const Nuxt = require('nuxt');
-      const options = require('../nuxt.config');
-      options.dev = !(process.env.NODE_ENV === 'production');
-      // Instanciate nuxt.js
-      const nuxt = new Nuxt(options);
+    nuxt: (req, res) => {
       // Build in development
-      if (options.dev) {
-        nuxt.build()
-          .then(nxt => {
-            return next(nxt.render);
-          });
-      }
+      return nuxt.render(req, res);
     },
 
     order: [
@@ -50,9 +41,9 @@ module.exports.http = {
       'compress',
       'poweredBy',
       'router',
+      'nuxt',
       'www',
       'favicon',
-      'nuxt'
     ],
 
   },
