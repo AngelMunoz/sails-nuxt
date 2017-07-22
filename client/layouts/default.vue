@@ -54,15 +54,15 @@
 export default {
   data() {
     return {
-      clipped: false,
+      clipped: true,
       drawer: true,
-      fixed: false,
+      fixed: true,
       items: [
         { icon: 'apps', title: 'Welcome', to: '/' },
         { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' },
         { icon: 'group', title: 'Users', to: '/users' }
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
