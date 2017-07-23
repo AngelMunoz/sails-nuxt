@@ -9,7 +9,7 @@
               <v-subheader class="grey--text text--lighten-1">Username</v-subheader>
             </v-flex>
             <v-flex xs12 sm8>
-              <v-text-field v-model="username" name="input-1-3" label="In-site name" required class="input-group" single-line dark prepend-icon="account"></v-text-field>
+              <v-text-field v-model="formUsername" name="input-1-3" label="In-site name" required class="input-group" single-line dark prepend-icon="account"></v-text-field>
             </v-flex>
           </v-layout>
           <v-layout row-sm column-xs>
@@ -17,7 +17,7 @@
               <v-subheader class="grey--text text--lighten-1">Name</v-subheader>
             </v-flex>
             <v-flex xs12 sm8>
-              <v-text-field v-model="name" name="input-2-3" label="Real name" required class="input-group" prepend-icon="account" single-line dark></v-text-field>
+              <v-text-field v-model="formName" name="input-2-3" label="Real name" required class="input-group" prepend-icon="account" single-line dark></v-text-field>
             </v-flex>
           </v-layout>
           <v-layout row-sm column-xs>
@@ -25,7 +25,7 @@
               <v-subheader class="grey--text text--lighten-1">Last Name</v-subheader>
             </v-flex>
             <v-flex xs12 sm8>
-              <v-text-field v-model="lastName" name="input-3-3" label="your last name" required prepend-icon="account" single-line dark></v-text-field>
+              <v-text-field v-model="formLastName" name="input-3-3" label="your last name" required prepend-icon="account" single-line dark></v-text-field>
             </v-flex>
           </v-layout>
         </v-container>
@@ -42,13 +42,16 @@
 </template>
 <script>
 export default {
-  props: ['name', 'username', 'lastName', 'edit', 'id'],
+  props: ['name', 'username', 'lastName', 'id'],
   data() {
     return {
       timeout: 4000,
       context: 'success',
       snackbar: false,
-      message: ''
+      message: '',
+      formName: this.name,
+      formUsername: this.username,
+      formLastName: this.lastName,
     }
   },
   methods: {
@@ -57,16 +60,17 @@ export default {
       try {
         if (this.id) {
           result = this.$axios.patch(`/users/${this.id}`, {
-            name: this.name,
-            lastName: this.lastName,
-            username: this.username
+            name: this.formName,
+            lastName: this.formLastName,
+            username: this.formUsername
           }).then(res => res.data);
         } else {
           result = this.$axios.post('/users', {
-            name: this.name,
-            lastName: this.lastName,
-            username: this.username
+            name: this.formName,
+            lastName: this.formLastName,
+            username: this.formUsername
           }).then(res => res.data);
+          this.$router.push({ name: 'users' });
         }
       } catch (error) {
         this.context = 'error'

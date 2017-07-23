@@ -2,7 +2,7 @@
   <v-layout row>
     <v-flex xs12 sm6>
       <v-subheader v-text="subtitle" dark></v-subheader>
-      <v-list two-line>
+      <v-list v-if="$store.state.users.list.length > 0" two-line>
         <template v-for="user in $store.state.users.list">
           <v-list-tile avatar v-bind:key="user.name" router :to="{ name: 'users-id', params: { id: user.id } }" v-ripple>
             <v-list-tile-avatar>
@@ -17,6 +17,7 @@
           <v-divider inset></v-divider>
         </template>
       </v-list>
+      <user-form v-else/>
     </v-flex>
     <v-flex xs12 sm6>
       <nuxt-child/>
@@ -24,6 +25,7 @@
   </v-layout>
 </template>
 <script>
+import UserForm from '~components/UserForm.vue';
 export default {
   async fetch({ store, params, app }) {
     let users = [];
@@ -37,11 +39,13 @@ export default {
   data() {
     return {
       subtitle: 'Users',
-      users: [],
       urlImg(id) {
         return `https://randomuser.me/api/portraits/men/${id}.jpg`
       }
     }
+  },
+  components: {
+    UserForm
   }
 }
 </script>
