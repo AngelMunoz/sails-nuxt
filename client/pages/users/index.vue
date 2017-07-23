@@ -25,6 +25,7 @@
   </v-layout>
 </template>
 <script>
+// TODO: move form inside a dialog or something plus some + button somewhere
 import UserForm from '~components/UserForm.vue';
 export default {
   async fetch({ store, params, app }) {
