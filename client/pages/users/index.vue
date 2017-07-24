@@ -17,7 +17,6 @@
             <v-list-tile-avatar>
               <img v-bind:src="urlImg(user.id) ">
             </v-list-tile-avatar>
-            </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title v-html="user.username "></v-list-tile-title>
               <v-list-tile-sub-title v-html="user.lastName "></v-list-tile-sub-title>
