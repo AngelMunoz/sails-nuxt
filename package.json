@@ -33,10 +33,10 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/nuxt-sails.git"
+    "url": "https://github.com/AngelMunoz/sails-nuxt.git"
   },
-  "author": "anonymous node/sails user",
-  "license": "",
+  "author": "Angel D. Munoz",
+  "license": "MIT",
   "engines": {
     "node": "8"
   }
