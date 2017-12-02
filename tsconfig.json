@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "charset": "utf8",
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    ".tmp",
+    "client"
+  ]
+}
