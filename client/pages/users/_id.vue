@@ -27,29 +27,29 @@
   </v-layout>
 </template>
 <script>
-import UserForm from '~components/UserForm.vue';
+import UserForm from "../../components/UserForm.vue";
 export default {
   async asyncData({ params, store, app }) {
     let user;
-    let subtitle = 'Select an user from the list on the left';
+    let subtitle = "Select an user from the list on the left";
     try {
       user = await app.$axios.get(`/users/${params.id}`).then(res => res.data);
     } catch (error) {
       return console.error(error);
     }
     if (user) {
-      subtitle = user.name
-      user.image = `https://randomuser.me/api/portraits/men/${user.id}.jpg`
+      subtitle = user.name;
+      user.image = `https://randomuser.me/api/portraits/men/${user.id}.jpg`;
     }
-    return { subtitle, user, editing: true }
+    return { subtitle, user, editing: true };
   },
   data() {
     return {
-      subtitle: 'Select from the list on the left',
+      subtitle: "Select from the list on the left",
       user: undefined,
       show: false,
       editing: false
-    }
+    };
   },
   components: {
     UserForm
@@ -67,8 +67,8 @@ export default {
       } catch (error) {
         return console.error(error);
       }
-      this.$router.push({ name: 'users' })
+      this.$router.push({ name: "users" });
     }
   }
-}
+};
 </script>

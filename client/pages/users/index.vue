@@ -33,43 +33,43 @@
   </v-layout>
 </template>
 <script>
-import UserForm from '~components/UserForm.vue';
+import UserForm from "../../components/UserForm.vue";
 export default {
   async fetch({ store, params, app }) {
     let users = [];
     try {
-      users = await app.$axios.get('/users').then(res => res.data);
+      users = await app.$axios.get("/users").then(res => res.data);
     } catch (error) {
       return console.error(error);
     }
-    store.commit('users/setUsers', users);
+    store.commit("users/setUsers", users);
   },
   data() {
     return {
-      subtitle: 'Users',
+      subtitle: "Users",
       dialog: false,
       urlImg(id) {
-        return `https://randomuser.me/api/portraits/men/${id}.jpg`
+        return `https://randomuser.me/api/portraits/men/${id}.jpg`;
       }
-    }
+    };
   },
   components: {
     UserForm
   },
   methods: {
     showAddUser() {
-      this.dialog = true
+      this.dialog = true;
     },
     async updateList() {
       let users;
       try {
-        users = await this.$axios.get('/users').then(res => res.data);
+        users = await this.$axios.get("/users").then(res => res.data);
       } catch (error) {
         return console.error(error);
       }
-      this.$store.commit('users/setUsers', users);
+      this.$store.commit("users/setUsers", users);
       this.dialog = false;
     }
   }
-}
+};
 </script>

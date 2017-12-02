@@ -1,14 +1,17 @@
 /**
  * nuxt config and init
  */
+const { Nuxt, Builder } = require('nuxt');
 
-const Nuxt = require('nuxt');
-const options = require('../nuxt.config');
-options.dev = !(process.env.NODE_ENV === 'production');
-const nuxt = new Nuxt(options);
-// Instanciate nuxt.js
-if (options.dev) {
-  nuxt.build();
+// Require Nuxt config
+const config = require('../nuxt.config');
+
+// Create a new Nuxt instance
+const nuxt = new Nuxt(config);
+
+// Enable live build & reloading on dev
+if (nuxt.options.dev) {
+  new Builder(nuxt).build();
 }
 
 module.exports = { nuxt };

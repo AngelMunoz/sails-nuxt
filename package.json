@@ -5,23 +5,23 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
-    "sails": "^1.0.0-25",
-    "sails-hook-orm": "^2.0.0-16",
-    "sails-hook-sockets": "^1.4.0",
+    "@nuxtjs/axios": "4.5.0",
+    "async": "2.6.0",
+    "axios": "0.17.1",
     "lodash": "4.17.4",
-    "async": "2.5.0",
-    "axios": "0.16.2",
-    "nuxt": "~1.0.0-alpha.5",
-    "vue": "2.3.4",
-    "vue-server-renderer": "2.3.4",
-    "vue-template-compiler": "2.3.4",
-    "vuetify": "~0.14.5",
-    "@nuxtjs/axios": "2.2.4"
+    "nuxt": "1.0.0-rc11",
+    "sails": "1.0.0-41",
+    "sails-hook-orm": "2.0.0-22",
+    "sails-hook-sockets": "1.4.3",
+    "vue": "2.5.9",
+    "vue-server-renderer": "2.5.9",
+    "vue-template-compiler": "2.5.9",
+    "vuetify": "0.17.3"
   },
   "devDependencies": {
-    "eslint": "4.3.0",
-    "stylus": "~0.54.5",
-    "stylus-loader": "^3.0.1"
+    "eslint": "4.12.1",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.1"
   },
   "scripts": {
     "start": "NODE_ENV=production node app.js",
