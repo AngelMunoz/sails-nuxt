@@ -21,5 +21,5 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  'get /api/sum': 'SumController.sum'
 };

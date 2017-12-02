@@ -6,6 +6,8 @@
   "keywords": [],
   "dependencies": {
     "@nuxtjs/axios": "4.5.0",
+    "@types/express": "^4.0.39",
+    "@types/node": "^8.0.53",
     "async": "2.6.0",
     "axios": "0.17.1",
     "lodash": "4.17.4",
@@ -13,6 +15,8 @@
     "sails": "1.0.0-41",
     "sails-hook-orm": "2.0.0-22",
     "sails-hook-sockets": "1.4.3",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.2",
     "vue": "2.5.9",
     "vue-server-renderer": "2.5.9",
     "vue-template-compiler": "2.5.9",

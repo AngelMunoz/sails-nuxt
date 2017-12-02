@@ -11,8 +11,7 @@
       "program": "${workspaceRoot}/app.js",
       "args": [
         "--dev",
-        "--log.level=silly",
-        "--port=3000"
+        "--log.level=silly"
       ],
       "env": {
         "NODE_ENV": "development"

@@ -19,7 +19,8 @@
  * For more information see:
  *   https://sailsjs.com/anatomy/app.js
  */
-
+// Enable Typescript usage
+require('ts-node/register');
 
 // Ensure we're in the project directory, so cwd-relative paths work as expected
 // no matter where we actually lift from.
