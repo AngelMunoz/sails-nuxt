@@ -40,7 +40,8 @@ export default {
       items: [
         { icon: "apps", title: "Welcome", to: "/" },
         { icon: "bubble_chart", title: "Inspire", to: "/inspire" },
-        { icon: "group", title: "Users", to: "/users" }
+        { icon: "account_box", title: "Users", to: "/users" },
+        { icon: "group", title: "Chat", to: "/chat" }
       ],
       title: "Vuetify.js"
     };

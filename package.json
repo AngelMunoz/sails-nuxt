@@ -17,8 +17,11 @@
     "sails-hook-sockets": "1.4.3",
     "ts-node": "^3.3.0",
     "typescript": "^2.6.2",
+    "sails.io.js": "1.1.13",
+    "socket.io": "2.0.4",
     "vue": "2.5.9",
     "vue-server-renderer": "2.5.9",
+    "vue-socket.io": "^2.1.1-a",
     "vue-template-compiler": "2.5.9",
     "vuetify": "0.17.3"
   },

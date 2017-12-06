@@ -1,4 +1,5 @@
-# nuxt-sails
+[Vue Socket.io]: https://github.com/MetinSeylan/Vue-Socket.io
+# Nuxt-Sails
 
 a [Sails](https://sailsjs.com) + [Nuxt](https://nuxtjs.org/) + [Vuetify](https://vuetifyjs.com/) application
 
@@ -18,7 +19,7 @@ the easiest way to give it a spin on dev mode is running it as the following
 
 - `git clone https://github.com/AngelMunoz/sails-nuxt.git`
 - `npm install`
-- `NODE_ENV=development node app.js --dev --port=3000 --log.level=sily`
+- `NODE_ENV=development node app.js --log.level=sily`
 
 on windows just omit the `NODE_ENV` part
 if you want to reload the serverside part of the framework consider `pm2` or `nodemon`
@@ -27,6 +28,10 @@ if you are using vscode it is pretty easy to debug the serverside
 just press <kbd>F5</kbd> *(after npm install of course)* and that should get you up and running
 
 
+# Recent Updates:
+- Adding Web Sockets Sample! [2017-05-12]
+
+    Thanks to [Vue Socket.io] we can now show a small "Sample" of a chat (sorry for that awfulness of my bad ui/ux skills but it should show the point)
 
 
 ### Sails Links
