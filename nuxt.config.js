@@ -26,8 +26,14 @@ module.exports = {
     vendor: ['vuetify', 'axios'],
   },
   modules: ['@nuxtjs/axios'],
-  plugins: ['~plugins/vuetify.js'],
+  plugins: [
+    { src: '~plugins/vue-socket.io.js', ssr: false },
+    '~plugins/vuetify.js'
+  ],
   css: [
     { src: '~assets/style/app.styl', lang: 'styl' }
-  ]
+  ],
+  axios: {
+    baseUrl: 'http://localhost:1337'
+  }
 };
