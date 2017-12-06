@@ -32,8 +32,5 @@ module.exports = {
   ],
   css: [
     { src: '~assets/style/app.styl', lang: 'styl' }
-  ],
-  axios: {
-    baseUrl: 'http://localhost:1337'
-  }
+  ]
 };
