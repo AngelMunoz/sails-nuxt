@@ -26,7 +26,7 @@ just press <kbd>F5</kbd> *(after npm install of course)* and that should get you
 
 
 # Recent Updates:
-- Updated nuxt and dependencies [2018-11-01]
+- ~Updated nuxt and dependencies [2018-11-01]~ Will be reverting to RC11 because of a bunch of errors, Looking at it.
 - Adding Web Sockets Sample! [2017-05-12]
 
     Thanks to [Vue Socket.io] we can now show a small "Sample" of a chat (sorry for that awfulness of my bad ui/ux skills but it should show the point)
