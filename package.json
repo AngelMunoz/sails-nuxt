@@ -16,22 +16,27 @@
     "sails.io.js": "^1.1.13",
     "socket.io": "^2.0.4",
     "vue": "2.5.9",
-    "vue-server-renderer": "^2.5.9",
+    "vue-meta": "^1.4.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vue-server-renderer": "2.5.9",
     "vue-socket.io": "^2.1.1-a",
     "vue-template-compiler": "2.5.9",
-    "vuetify": "^0.17.3"
+    "vuetify": "0.17.3"
   },
   "devDependencies": {
     "eslint": "4.12.1",
     "stylus": "0.54.5",
-    "stylus-loader": "3.0.1"
+    "stylus-loader": "3.0.1",
+    "webpack": "^3.10.0"
   },
   "scripts": {
     "start": "NODE_ENV=production node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0 && echo '✔  Your code looks good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
-    "debug": "node debug app.js"
+    "debug": "node debug app.js",
+    "dev": "node app.js --development"
   },
   "main": "app.js",
   "repository": {
