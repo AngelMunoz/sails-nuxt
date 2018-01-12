@@ -8,13 +8,10 @@ This project was made as a concept proof of sails + nuxt working together and us
 as the ui framework
 
 Prerequisites as far as I know:
-- node 6
+- node 8
 - eslint
 
 and any other prerequisites of sails, nuxt and vuetify
-
-Recommended: `node 8`
-
 the easiest way to give it a spin on dev mode is running it as the following
 
 - `git clone https://github.com/AngelMunoz/sails-nuxt.git`
@@ -29,6 +26,7 @@ just press <kbd>F5</kbd> *(after npm install of course)* and that should get you
 
 
 # Recent Updates:
+- Updated nuxt and dependencies [2018-11-01]
 - Adding Web Sockets Sample! [2017-05-12]
 
     Thanks to [Vue Socket.io] we can now show a small "Sample" of a chat (sorry for that awfulness of my bad ui/ux skills but it should show the point)
