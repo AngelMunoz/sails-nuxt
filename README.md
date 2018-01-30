@@ -26,6 +26,7 @@ just press <kbd>F5</kbd> *(after npm install of course)* and that should get you
 
 
 # Recent Updates:
+- Updated nuxt and dependencies [2018-30-01]. thanks to [@iworb](https://github.com/Iworb) for pointing out the correct versions
 - ~Updated nuxt and dependencies [2018-11-01]~ Will be reverting to RC11 because of a bunch of errors, Looking at it.
 - Adding Web Sockets Sample! [2017-05-12]
 
