@@ -12,8 +12,8 @@
     </v-dialog>
     <v-flex xs12 sm6 style="height: 600px; overflow: auto;">
       <v-list v-if="$store.state.users.list.length > 0" two-line>
-        <template v-for="user in $store.state.users.list">
-          <v-list-tile avatar router :to="{ name: 'users-id', params: { id: user.id } }" v-ripple :key="user.name">
+        <template v-for="(user, index) in $store.state.users.list">
+          <v-list-tile avatar router :to="{ name: 'users-id', params: { id: user.id } }" v-ripple :key="index">
             <v-list-tile-avatar>
               <img v-bind:src="urlImg(user.id) ">
             </v-list-tile-avatar>
@@ -22,7 +22,6 @@
               <v-list-tile-sub-title v-html="user.lastName "></v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-divider inset :key="user.name"></v-divider>
         </template>
       </v-list>
       <user-form v-else-if="!dialog" v-on:updateduser="updateList" />
