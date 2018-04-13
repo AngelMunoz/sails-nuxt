@@ -24,8 +24,13 @@ if you want to reload the serverside part of the framework consider `pm2` or `no
 if you are using vscode it is pretty easy to debug the serverside
 just press <kbd>F5</kbd> *(after npm install of course)* and that should get you up and running
 
+##### Production
+After you have followed [Sails's Team Recomendations for production](https://sailsjs.com/documentation/concepts/deployment) just
+run the `npm start` command and this should just work.
+
 
 # Recent Updates:
+- Updated Adding cross-env and "start" npm command as production [2018-11-04]. 
 - Updated Sails, Vuetify and the rest of the dependencies, Also added a scroll bar on the chat window demo [2018-11-04]. 
 - Updated Vuetify and dependencies [2018-22-02]. 
 - Updated nuxt and dependencies [2018-30-01]. thanks to [@iworb](https://github.com/Iworb) for pointing out the correct versions

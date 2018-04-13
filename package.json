@@ -8,6 +8,7 @@
     "@nuxtjs/axios": "~5.3.1",
     "async": "~2.6.0",
     "axios": "~0.18.0",
+    "cross-env": "~5.1.4",
     "lodash": "~4.17.5",
     "nuxt": "~1.4.0",
     "sails": "~1.0.1",
@@ -17,7 +18,7 @@
     "socket.io": "~2.1.0",
     "vue": "~2.5.16",
     "vue-server-renderer": "~2.5.16",
-    "vue-socket.io": "^2.1.1",
+    "vue-socket.io": "~2.1.1",
     "vue-template-compiler": "~2.5.16",
     "vuetify": "~1.0.14"
   },
@@ -28,7 +29,8 @@
     "stylus-loader": "~3.0.2"
   },
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
+    "build": "nuxt build",
+    "start": "npm run build && cross-env NODE_ENV=production node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0 && echo '✔  Your code looks good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",

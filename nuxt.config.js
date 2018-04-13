@@ -32,5 +32,6 @@ module.exports = {
   ],
   css: [
     { src: '~assets/style/app.styl', lang: 'styl' }
-  ]
+  ],
+  dev: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 };
