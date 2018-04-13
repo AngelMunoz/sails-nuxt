@@ -24,7 +24,7 @@ if you want to reload the serverside part of the framework consider `pm2` or `no
 if you are using vscode it is pretty easy to debug the serverside
 just press <kbd>F5</kbd> *(after npm install of course)* and that should get you up and running
 
-##### Production
+### Production
 After you have followed [Sails's Team Recomendations for production](https://sailsjs.com/documentation/concepts/deployment) just
 run the `npm start` command and this should just work.
 
