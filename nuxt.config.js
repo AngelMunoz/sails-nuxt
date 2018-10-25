@@ -22,9 +22,6 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {
-    vendor: ['vuetify', 'axios'],
-  },
   modules: ['@nuxtjs/axios'],
   plugins: [
     { src: '~plugins/vue-socket.io.js', ssr: false },

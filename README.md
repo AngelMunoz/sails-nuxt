@@ -30,6 +30,7 @@ run the `npm start` command and this should just work.
 
 
 # Recent Updates:
+- Updated Sails/Nuxt/Vuetify and dependencies [2018-25-10]. 
 - Updated Adding cross-env and "start" npm command as production [2018-11-04]. 
 - Updated Sails, Vuetify and the rest of the dependencies, Also added a scroll bar on the chat window demo [2018-11-04]. 
 - Updated Vuetify and dependencies [2018-22-02]. 

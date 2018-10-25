@@ -9,13 +9,12 @@
           <div ref="scrollable" class="scrollable">
             <ws-message-list :messages="messageList"> </ws-message-list>
           </div>
-          <v-text-field
+          <v-textarea
               name="txtMessage"
               label="Message"
               v-model="text"
-              multi-line
               @keypress.ctrl.enter="sendMessage()"
-            ></v-text-field>
+            ></v-textarea>
         </v-card-text>
         <v-card-actions>
           <v-btn flat @click="sendMessage()">Send</v-btn>
