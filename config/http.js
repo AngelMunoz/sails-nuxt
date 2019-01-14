@@ -9,7 +9,6 @@
  * https://sailsjs.com/config/http
  */
 
-const { nuxt } = require('./nuxt');
 module.exports.http = {
 
   /****************************************************************************
@@ -31,7 +30,7 @@ module.exports.http = {
     ***************************************************************************/
     nuxt: (req, res) => {
       // Build in development
-      return nuxt.render(req, res);
+      return sails.config.nuxt.render(req, res);
     },
 
     order: [
