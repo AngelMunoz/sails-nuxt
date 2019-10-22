@@ -1,11 +1,11 @@
 <template>
   <v-container>
-    <v-subheader>Username: {{username}}</v-subheader>
-    <v-divider inset></v-divider>
-    <v-list-tile-content>
-      <v-list-tile-title>{{text}}</v-list-tile-title>
-    </v-list-tile-content>
-    <v-divider></v-divider>
+    <v-list-item two-line>
+      <v-list-item-content>
+        <v-list-item-title>{{text}}</v-list-item-title>
+        <v-list-item-subtitle>Username: {{username}}</v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
   </v-container>
 </template>
 

@@ -22,15 +22,15 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {
-    vendor: ['vuetify', 'axios'],
-  },
   modules: ['@nuxtjs/axios'],
+  buildModules: [
+    '@nuxtjs/vuetify'
+  ],
   plugins: [
-    { src: '~plugins/vue-socket.io.js', ssr: false },
-    '~plugins/vuetify.js'
+    { src: '~plugins/vue-socket.io.js', ssr: false }
   ],
   css: [
     { src: '~assets/style/app.styl', lang: 'styl' }
-  ]
+  ],
+  dev: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 };
