@@ -41,6 +41,10 @@ run the `npm start` command and this should just work.
 
     Thanks to [Vue Socket.io] we can now show a small "Sample" of a chat (sorry for that awfulness of my bad ui/ux skills but it should show the point)
 
+### Extras
+Don't forget there's also a [typescript branch](https://github.com/AngelMunoz/sails-nuxt/tree/typescript-controllers)
+you should be able to use typescript in the controllers as well as on the helpers, that can give you a headstart
+
 
 ### Sails Links
 
