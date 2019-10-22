@@ -30,13 +30,14 @@ run the `npm start` command and this should just work.
 
 
 # Recent Updates:
-- Updated Sails/Nuxt/Vuetify and dependencies [2018-25-10]. 
-- Updated Adding cross-env and "start" npm command as production [2018-11-04]. 
-- Updated Sails, Vuetify and the rest of the dependencies, Also added a scroll bar on the chat window demo [2018-11-04]. 
-- Updated Vuetify and dependencies [2018-22-02]. 
-- Updated nuxt and dependencies [2018-30-01]. thanks to [@iworb](https://github.com/Iworb) for pointing out the correct versions
-- ~Updated nuxt and dependencies [2018-11-01]~ Will be reverting to RC11 because of a bunch of errors, Looking at it.
-- Adding Web Sockets Sample! [2017-05-12]
+- Updated dependencies and fixed a lot of vuetify deprecations as well as fixing some errors on user update in the client side [2019-10-21]. 
+- Updated Sails/Nuxt/Vuetify and dependencies [2018-10-25]. 
+- Updated Adding cross-env and "start" npm command as production [2018-04-11]. 
+- Updated Sails, Vuetify and the rest of the dependencies, Also added a scroll bar on the chat window demo [2018-04-11]. 
+- Updated Vuetify and dependencies [2018-02-22]. 
+- Updated nuxt and dependencies [2018-01-30]. thanks to [@iworb](https://github.com/Iworb) for pointing out the correct versions
+- ~Updated nuxt and dependencies [2018-01-11]~ Will be reverting to RC11 because of a bunch of errors, Looking at it.
+- Adding Web Sockets Sample! [2017-12-05]
 
     Thanks to [Vue Socket.io] we can now show a small "Sample" of a chat (sorry for that awfulness of my bad ui/ux skills but it should show the point)
 
