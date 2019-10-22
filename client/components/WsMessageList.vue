@@ -1,5 +1,5 @@
 <template>
-  <v-list two-line>
+  <v-list>
     <template v-for="(message, $index) in messages">
       <ws-message :username="message.username" :text="message.text" :key="$index"></ws-message>
     </template>

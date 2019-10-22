@@ -7,17 +7,17 @@
       <v-card>
         <v-card-text>
           <div ref="scrollable" class="scrollable">
-            <ws-message-list :messages="messageList"> </ws-message-list>
+            <ws-message-list :messages="messageList"></ws-message-list>
           </div>
           <v-textarea
-              name="txtMessage"
-              label="Message"
-              v-model="text"
-              @keypress.ctrl.enter="sendMessage()"
-            ></v-textarea>
+            name="txtMessage"
+            label="Message"
+            v-model="text"
+            @keypress.ctrl.enter="sendMessage()"
+          ></v-textarea>
         </v-card-text>
         <v-card-actions>
-          <v-btn flat @click="sendMessage()">Send</v-btn>
+          <v-btn text @click="sendMessage()">Send</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>

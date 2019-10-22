@@ -1,33 +1,31 @@
 <template>
-  <v-app id="inspire" dark>
-    <v-navigation-drawer
-      clipped
-      fixed
-      v-model="drawer"
-      app
-    >
+  <v-app id="inspire">
+    <v-app-bar app clipped-left>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Application</v-toolbar-title>
+    </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" app clipped>
       <v-list dense>
-        <v-list-tile router v-for="(item, i) in items" :key="i" :to="item.to">
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+        <v-list-item router v-for="(item, i) in items" :key="i" :to="item.to">
+          <v-list-item-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>{{item.title}}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app fixed clipped-left>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-toolbar>
+
     <v-content>
-      <v-container fluid fill-height>
+      <v-container fluid class="fill-height">
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer app fixed>
-      <span>&copy; 2017</span>
+
+    <v-footer app>
+      <span>&copy; 2019</span>
     </v-footer>
   </v-app>
 </template> 
@@ -45,6 +43,9 @@ export default {
       ],
       title: "Vuetify.js"
     };
+  },
+  created() {
+    this.$vuetify.theme.dark = true;
   }
 };
 </script>
